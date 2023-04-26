@@ -36,7 +36,6 @@
         <!-- App Css-->
         <link href="../public/css/app.min.css" id="app-style" rel="stylesheet"
             type="text/css" />
-
         <!-- Custom Css -->
         <link href="../public/css/custom.css" rel="stylesheet" type="text/css" />
 

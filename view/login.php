@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>UCB | Sistema de Compras y Ventas</title>
+        <title>UCB | Sistema de resgistros </title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -71,16 +71,16 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="mt-4 mt-md-5 text-center">
+                                    <!-- <div class="mt-4 mt-md-5 text-center">
                                         <p class="mb-0">© <script>document.write(new Date().getFullYear())</script> UCB | Sistema de Compras y Ventas. Desarrollado por <i class="mdi mdi-heart text-danger"></i> Helmer Fellman Mendoza Jurado</p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                         <!-- end auth full page content -->
                     </div>
                     <!-- end col -->
-                    <div class="col-xxl-9 col-lg-8 col-md-7">
+                    <!-- <div class="col-xxl-9 col-lg-8 col-md-7">
                         <div class="auth-bg pt-md-5 p-4 d-flex">
                             <div class="bg-overlay bg-primary"></div>
                             <ul class="bg-bubbles">
@@ -166,7 +166,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- end col -->
                 </div>
                 <!-- end row -->
