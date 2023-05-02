@@ -51,7 +51,7 @@
         </style>
     </head>
 
-    <body>
+    <body data-layout="horizontal">
 
         <!-- <body data-layout="horizontal"> -->
 
@@ -60,36 +60,39 @@
 
             <header id="page-topbar">
                 <div class="navbar-header">
-                    <div class="d-flex">
+                <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
                             <a href="index.html" class="logo logo-dark">
                                 <span class="logo-sm">
-                                    <img src="../public/images/logo-sm.svg" alt=""
-                                        height="24">
+                                    <img src="assets/images/logo-sm.svg" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="../public/images/logo-sm.svg" alt=""
-                                        height="24"> <span class="logo-txt">UCB Ventas</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Arquitectura</span>
                                 </span>
                             </a>
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="../public/images/logo-sm.svg" alt=""
-                                        height="24">
+                                    <img src="assets/images/logo-sm.svg" alt="" height="24">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="../public/images/logo-sm.svg" alt=""
-                                        height="24"> <span class="logo-txt">UCB Ventas</span>
+                                    <img src="assets/images/logo-sm.svg" alt="" height="24"> <span class="logo-txt">Arquitectura</span>
                                 </span>
                             </a>
                         </div>
 
-                        <button type="button" class="btn btn-sm px-3
-                            font-size-16 header-item" id="vertical-menu-btn">
+                        <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
                             <i class="fa fa-fw fa-bars"></i>
                         </button>
+
+                        <!-- App Search-->
+                        <form class="app-search d-none d-lg-block">
+                            <div class="position-relative">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <button class="btn btn-primary" type="button"><i class="bx bx-search-alt align-middle"></i></button>
+                            </div>
+                        </form>
                     </div>
 
                     <div class="d-flex">
@@ -319,7 +322,6 @@
                             </div>
                         </div>
 
-
                         <div class="dropdown d-inline-block">
                             <button type="button" class="btn header-item
                                 bg-soft-light border-start border-end"
@@ -356,122 +358,122 @@
             </header>
 
             <!-- ========== Left Sidebar Start ========== -->
-            <div class="vertical-menu">
+            <div class="topnav">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
 
-                <div data-simplebar class="h-100">
+                        <div class="collapse navbar-collapse" id="topnav-menu-content">
+                            <ul class="navbar-nav">
 
-                    <!--- Sidemenu -->
-                    <div id="sidebar-menu">
-                        <!-- Left Menu Start -->
-                        <ul class="metismenu list-unstyled" id="side-menu">
-                            <li class="menu-title" data-key="t-menu">Menu Principal</li>
-                            <?php
-                                if ($_SESSION['escritorio']==1){
-                                    echo '<li>
-                                        <a href="escritorio.php">
-                                            <i data-feather="home"></i>
-                                            <span data-key="t-dashboard">Escritorio</span>
-                                        </a>
-                                    </li>';
-                                }
-                            ?>
-                            <?php
-                                if ($_SESSION['almacen']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
-                                                <i data-feather="grid"></i>
-                                                <span data-key="t-apps">Almacén</span>
+                                <?php
+                                    if ($_SESSION['escritorio']==1){
+                                        echo '<li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="escritorio.php">
+                                                <i data-feather="home"></i>
+                                                <span data-key="t-dashboard">Escritorio</span>
                                             </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                                <li><a href="articulo.php"><i class="bx bx-circle"></i> Artículos</a></li>
-                                                <li><a href="categoria.php"><i class="bx bx-circle"></i> Categorías</a></li>
-                                            </ul>
                                         </li>';
-                                }
-                            ?>  
-                            <?php
-                                if ($_SESSION['compras']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
-                                                <i data-feather="users"></i>
-                                                <span data-key="t-authentication">Compras</span>
-                                            </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                                <li><a href="ingreso.php"><i class="bx bx-circle"></i> Ingresos</a></li>
-                                                <li><a href="proveedor.php"><i class="bx bx-circle"></i> Proveedores</a></li>
-                                            </ul>
-                                        </li>';
-                                }
-                            ?>                            
-                            <?php
-                                if ($_SESSION['ventas']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
-                                                <i data-feather="users"></i>
-                                                <span data-key="t-authentication">Ventas</span>
-                                            </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                                <li><a href="venta.php"><i class="bx bx-circle"></i> Ventas</a></li>
-                                                <li><a href="cliente.php"><i class="bx bx-circle"></i> Clientes</a></li>
-                                            </ul>
-                                        </li>';
-                                }
-                            ?>   
-                            <?php
-                                if ($_SESSION['acceso']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
-                                                <i data-feather="users"></i>
-                                                <span data-key="t-authentication">Autenticación</span>
-                                            </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                                <li><a href="usuario.php"><i class="bx bx-circle"></i> Usuarios</a></li>
-                                                <li><a href="permiso.php"><i class="bx bx-circle"></i> Permisos</a></li>
-                                                <li><a href="rol.php"><i class="bx bx-circle"></i> Rol</a></li>
-                                            </ul>
-                                        </li>';
-                                }
-                            ?>                              
-                            
-                                                  
+                                    }
+                                ?>
+                                <?php
+                                    if ($_SESSION['almacen'] == 1) {
+                                        echo '<li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle arrow-none" href="javascript: void(0);" role="button">
+                                                    <i data-feather="grid"></i>
+                                                    <span data-key="t-apps">Almacén</span>
+                                                </a>
+                                                <div class="dropdown-menu" aria-expanded="false">
+                                                    <a class="dropdown-item" target="_self" href="articulo.php"><i class="bx bx-circle"></i> Artículos</a>
+                                                    <a class="dropdown-item" target="_self" href="categoria.php"><i class="bx bx-circle"></i> Categorías</a>
+                                                </div>
+                                            </li>';
+                                    }
+                                ?>
+                                
+                                <?php
+                                    if ($_SESSION['acceso']==1){
+                                        echo '<li class="nav-item dropdown"> 
+                                                <a  class="nav-link dropdown-toggle arrow-none" href="javascript: void(0);" role="button">
+                                                
+                                                    <i data-feather="grid"></i>
+                                                    <span data-key="t-authentication">Autenticación</span>
+                                                </a>
+                                                <div class="dropdown-menu" aria-expanded="false">
+                                                    <a class="dropdown-item" target="_self" href="usuario.php"><i class="bx bx-circle"></i> Usuarios</a>
+                                                    <a class="dropdown-item" target="_self" href="permiso.php"><i class="bx bx-circle"></i> Permisos</a>
+                                                    <a class="dropdown-item" target="_self" href="rol.php"><i class="bx bx-circle"></i> Rol</a>
+                                                </div>
+                                            </li>';
+                                    }
+                                ?>                              
+                                                
 
-                            <li class="menu-title mt-2" data-key="t-components">Reportes</li>
-                            <?php
-                                if ($_SESSION['consulta_compras']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
+                                <li class="menu-title mt-2" data-key="t-components">Reportes</li>
+                                <?php
+                                if ($_SESSION['consulta_compras'] == 1) {
+                                    echo '<li class="nav-item">
+                                            <a href="javascript: void(0);" class="nav-link has-arrow">
                                                 <i data-feather="users"></i>
                                                 <span data-key="t-authentication">Consulta de Compras</span>
                                             </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                                <li><a href="ingreso_fecha.php"><i class="bx bx-circle"></i> Consulta Compras</a></li> 
-                                            </ul>
+                                            <div class="dropdown-menu" aria-expanded="false">
+                                                <a class="dropdown-item" target="_self" href="ingreso_fecha.php"><i class="bx bx-circle"></i> Consulta Compras</a>
+                                            </div>
                                         </li>';
                                 }
-                            ?>   
+                            ?>
+
+                                <?php
+                                    if ($_SESSION['compras'] == 1) {
+                                        echo '<li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle arrow-none" href="javascript: void(0);" role="button">
+                                                    <i data-feather="users"></i>
+                                                    <span data-key="t-authentication">Compras</span>
+                                                </a>
+                                                <div class="dropdown-menu" aria-expanded="false">
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" target="_self"  href="ingreso.php"><i class="bx bx-circle"></i> Ingresos</a>
+                                                        <a  class="dropdown-item" target="_self"  href="proveedor.php"><i class="bx bx-circle"></i> Proveedores</a>
+                                                    </div>
+                                                </div>
+                                            </li>';
+                                    }
+                                ?>
+                          
+                                <?php
+                                    if ($_SESSION['ventas'] == 1) {
+                                        echo '<li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle arrow-none" href="javascript: void(0);" role="button">
+                                                    <i data-feather="users"></i>
+                                                    <span data-key="t-authentication">Ventas</span>
+                                                </a>
+                                                <div class="dropdown-menu" aria-expanded="false">
+                                                    <a  class="dropdown-item" target="_self"  href="venta.php"><i class="bx bx-circle"></i> Ventas</a>
+                                                    <a  class="dropdown-item" target="_self"  href="cliente.php"><i class="bx bx-circle"></i> Clientes</a>
+                                                </div>
+                                            </li>';
+                                    }
+                                ?>
+
                             <?php
-                                if ($_SESSION['consulta_ventas']==1){
-                                    echo '<li>
-                                            <a href="javascript: void(0);"
-                                                class="has-arrow">
+                                if ($_SESSION['consulta_ventas'] == 1) {
+                                    echo '<li class="nav-item">
+                                            <a href="javascript: void(0);" class="nav-link has-arrow">
                                                 <i data-feather="users"></i>
                                                 <span data-key="t-authentication">Consulta de Ventas</span>
                                             </a>
-                                            <ul class="sub-menu" aria-expanded="false">
-                                            <li><a href="venta_fecha_cliente.php"><i class="bx bx-circle"></i> Consulta Ventas</a></li> 
-                                            </ul>
+                                            <div class="dropdown-menu" aria-expanded="false">
+                                                <a  class="dropdown-item" target="_self"  href="venta_fecha_cliente.php"><i class="bx bx-circle"></i> Consulta Ventas</a>
+                                            </div>
                                         </li>';
                                 }
-                            ?>   
-                            
-                        </ul>
-                    </div>
+                            ?>
+
+                            </ul>
+                        </div>
+                    </nav>
                     <!-- Sidebar -->
                 </div>
             </div>
             <!-- Left Sidebar End -->
+        </div>
